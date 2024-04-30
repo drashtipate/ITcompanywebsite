@@ -1,0 +1,24 @@
+##counter section:
+- jquery script link
+- counter js script link // zip file download https://github.com/bfintal/Counter-Up ema jquery.counterup.min.js file add and <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script> add
+- class name counter ex.<h1 class="counter">81</h1>
+- <script>
+  $(document).ready(function() {
+    $('.counter').counterUp({
+      delay: 10,
+      time: 2000
+    });
+  });
+</script>
+
+
+validaion required:
+@if ($errors->any())
+  <div class="alert alert-danger mt-3">
+    <ul>
+      @foreach ($errors->all() as $error)
+        <li>{{ $error }}</li>
+      @endforeach
+    </ul>
+  </div>
+@endif
