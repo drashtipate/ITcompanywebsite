@@ -56,7 +56,8 @@ class ContactController extends Controller
             // 	$message->to('drashtiv2392002@gmail.com'); // Set the recipient's email address here
             // });
 
-            dispatch(new contactmail($mailData));
+            //dd($mailData);
+            dispatch(new contactmail($mailData)); //queue job mail send 
 
 
             // Send confirmation email to user
