@@ -45,7 +45,7 @@ class ContactController extends Controller
         
 
             // Send email
-            Mail::to('drashtiv2392002@gmail.com')->send(new ContactUs($mailData));
+            // Mail::to('drashtiv2392002@gmail.com')->send(new ContactUs($mailData));
 
             // Send email to admin
             // Mail::send('drashtiv2392002@gmail.com')->to(new ContactUs($mailData));
@@ -55,6 +55,8 @@ class ContactController extends Controller
             // 	$message->from($mailData['email'], $mailData['name']); // Set user's email and name as "from"
             // 	$message->to('drashtiv2392002@gmail.com'); // Set the recipient's email address here
             // });
+
+            dispatch(new contactmail($mailData));
 
 
             // Send confirmation email to user
